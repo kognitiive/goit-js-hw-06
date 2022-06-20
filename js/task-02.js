@@ -18,12 +18,12 @@ const listRef = document.querySelector('#ingredients')
 
 const arr = []
 
-for (let i = 0; i < ingredients.length; i += 1) {
+ingredients.map(ingredient => { 
   let item = document.createElement('li');
-  item.textContent = ingredients[i];
+  item.textContent = ingredient;
   item.classList.add('item');
   arr.push(item);
-}
+})
 
 listRef.append(...arr)
 console.log(listRef)

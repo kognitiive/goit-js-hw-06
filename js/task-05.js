@@ -10,5 +10,7 @@ const output = document.querySelector('#name-output')
 textInput.addEventListener('input', refreshName)
 
 function refreshName(event) {
-    output.textContent = event.currentTarget.value;
+    textInput.value === ''
+        ? output.textContent = 'Anonymous'
+        : output.textContent = event.currentTarget.value;
 }

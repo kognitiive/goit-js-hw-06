@@ -6,20 +6,23 @@
 Оновлюй інтерфейс новим значенням змінної counterValue.
 */
 
-const counterValue = document.querySelector('#value')
+const counterText = document.querySelector('#value')
 const btnDecValue = document.querySelector('[data-action="decrement"]')
 const btnIncValue = document.querySelector('[data-action="increment"]')
+let counterNum = 0;
 
 btnDecValue.addEventListener('click', decrementValue);
 btnIncValue.addEventListener('click', incrementValue);
 
 
 function decrementValue() {
-    counterValue.textContent -= 1;
+    counterNum -= 1;
+    counterText.textContent = counterNum;
 }
 
 function incrementValue() {
-    counterValue.textContent = parseInt(counterValue.textContent) + 1;
+    counterNum += 1;
+    counterText.textContent = counterNum;
 }
 
 
